@@ -1,0 +1,217 @@
+/* stil.css v=1.0 (c) Pynt og prakt AS */
+
+/* ----------------------------------------------------
+    KONFIGURASJONER & VARIABLER
+---------------------------------------------------- */
+@font-face {
+   font-family: 'Space Grotesk';
+   src: url('/r/skrift/SpaceGrotesk-Variable.ttf') format('truetype');
+   font-weight: 100 1000;
+   font-display: swap;
+   font-style: normal;
+ }
+:root {
+  --ratio: 1.4;
+  --s-6: calc(var(--s-5) / var(--ratio));
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --s6: calc(var(--s5) * var(--ratio));
+
+  --font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+  --font-merkevare: "Space Grotesk", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  --line-height: var(--ratio, 1,5);
+  --line-height-small: calc(0.8 * var(--ratio));
+  line-height: var(--line-height);
+  font-size: calc(.333vw + var(--s0));
+  font-family: var(--font-sans, sans-serif);
+
+  --f-svart: black;
+  --f-hvit: white;
+  --f-dunkel: #101318;
+  --f-lys: #EFECE7;
+  --f-uth-blaa: #225EB7;
+  --f-uth-gul: #DEA148;
+  --temafarge: var(--f-lys, white);
+  background-color: var(--f-lys, white);
+  color:var(--f-dunkel, black);
+
+  --logo: url("/r/svg/logo.svg");
+
+  --margin: var(--s1);
+  --toppmargin: calc(1.5*var(--margin));
+  --measure: 70ch;
+
+  --border-thin: var(--s-5);
+  --border-thick: var(--s-2);
+  --space: var(--ratio);
+
+  scroll-behavior: smooth;
+}
+
+/* ----------------------------------------------------
+    NULLSTILLINGER
+---------------------------------------------------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  &:focus-visible {
+    outline-color: var(--f-dunkel);
+    outline-style: solid;
+    outline-offset: .15rem;
+    outline-width: .15rem;
+  }
+}
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+body {
+  min-height: 100vh;
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+  margin: var(--margin) calc(1.5*var(--margin));
+}
+hmtl, body, div, header, nav, main, section, footer {
+  max-inline-size: none;
+}
+p, h1, h2, h3, h4, h5, h6, a{
+  overflow-wrap: break-word;
+  font-variant-ligatures: common-ligatures;
+}
+h1, h2, h3, h4, button, input, label {
+  line-height: var(--line-height-small);
+}
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+ul[role='list'], ol[role='list'] {
+  list-style: none;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+textarea:not([rows]) {
+  min-height: 10em;
+}
+#root, #__next {
+  isolation: isolate;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+svg:not([width]):not([height]) {
+  height: 1ex;
+  width:auto;
+}
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* ----------------------------------------------------
+	STILER
+---------------------------------------------------- */
+
+nav {
+  width: calc(100vw - calc(2*calc(1.5*var(--margin))));
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--s1, 1em);
+  /* position: fixed; */
+  top: var(--margin);
+  left: calc(1.5*var(--margin));
+  right: calc(1.5*var(--margin));
+  justify-content: middle;
+  background: var(--f-lys);
+
+  & :first-child {
+	content: var(--logo);
+	margin: 0 auto 0 0;
+	height: 12vh;
+	& :hover,:focus {
+	  color: var(--f-uth-gul);
+	}
+  }
+  & :last-child {
+	margin-right: 0;
+  }
+  & a {
+	margin: auto 10pt;
+	text-size: var(--s0);
+	text-decoration: none;
+	font-size: var(--s0);
+	&:is(:hover,:active,:focus) {
+	  text-decoration: underline;
+	  text-underline-offset: var(--s-6);
+	  text-decoration-thickness: calc((var(--ratio)*.07)*1rem);
+	}
+  }
+}
+
+nav::before {
+  top: calc(var(--margin)*-1);
+  left: calc(-1.2*var(--margin));
+  background: var(--f-lys);
+  width: 100vw;
+}
+
+main {
+  margin: var(--s5) 0 5dvh 0;
+  min-height: 100dvh;
+}
+
+footer {
+  width: calc(100vw - calc(2*calc(1.5*var(--margin))));
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1, 1em);
+  & :first-child {
+	flex-basis: 0;
+	flex-grow: 999;
+	min-inline-size: 55%;
+  }
+  & :last-child {
+  flex-grow: 1;
+  }
+}
+
+ul.smuler {
+  padding: .9em 0;
+  list-style: none;
+  && li {
+    display: inline;
+    font-size: 0.7em;
+    &&:last-child {
+      font-weight: bold;
+    }
+  }
+  && li+li:before {
+    padding: 0.4em;
+    color: var(--f-dunkel);
+    content: "/\00a0";
+  }
+}
+
+hr {
+  margin: 1em 0;
+}

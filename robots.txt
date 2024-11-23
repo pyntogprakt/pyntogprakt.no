@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /r/
+Disallow: /skrift/
+Allow: /
+
+Sitemap: https://pyntogprakt.no/sitemap.xml
