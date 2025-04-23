@@ -1,0 +1,4 @@
+{
+  "layout": "layouts/tips.html",
+  "permalink": "/blog/{{ title | slugify}}/index.html"
+}

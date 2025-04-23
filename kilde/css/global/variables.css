@@ -1,0 +1,39 @@
+:root {
+    --gutter: var(--space-m-l);
+    --transition-base: 250ms ease;
+    --transition-movement: 200ms linear;
+    --transition-fade: 300ms ease;
+    --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+    --stroke: 1px dashed var(--color-mid);
+    --stroke-solid: 1px solid var(--color-mid);
+    --radius-s: 0.2rem;
+    --radius-m: 0.75rem;
+    --radius-l: 2.5rem;
+    --uppercase-kerning: 0.04ch;
+
+    --roslindale-aalt: "aalt" off;
+    --roslindale-c2sc: "c2sc" off;
+    --roslindale-case: "case" off;
+    --roslindale-dlig: "dlig" off;
+    --roslindale-dnom: "dnom" off;
+    --roslindale-frac: "frac" off;
+    --roslindale-lnum: "lnum" off;
+    --roslindale-numr: "numr" off;
+    --roslindale-onum: "onum" off;
+    --roslindale-ordn: "ordn" off;
+    --roslindale-pnum: "pnum" off;
+    --roslindale-salt: "salt" off;
+    --roslindale-sinf: "sinf" off;
+    --roslindale-smcp: "smcp" off;
+    --roslindale-ss01: "ss01" off;
+    --roslindale-ss02: "ss02" off;
+    --roslindale-ss03: "ss03" off;
+    --roslindale-ss05: "ss05" off;
+    --roslindale-ss06: "ss06" off;
+    --roslindale-ss10: "ss10" off;
+    --roslindale-ss11: "ss11" off;
+    --roslindale-ss20: "ss20" off;
+    --roslindale-subs: "subs" off;
+    --roslindale-sups: "sups" off;
+    --roslindale-tnum: "tnum" off;
+}

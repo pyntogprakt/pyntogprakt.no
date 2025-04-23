@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% set sidehodeTittel = title %}
+{% set sidehodeOppsummering = content %}
+{% set avtalevilkår = collections.vilkår %}
+
+{% block content %}
+  <article>
+      {% include "partials/sidehode.html" %}
+		{% if avtalevilkår %}
+		{% for item in avtalevilkår %}<h2>{{ item.data.title | safe }}</h2>
+				{{ item.templateContent | safe }}
+			{% endfor %}
+		{% endif %}
+  </article>
+{% endblock %}

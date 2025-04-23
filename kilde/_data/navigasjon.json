@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "Utstyr",
+      "url": "/utstyr"
+    },
+    {
+      "text": "Referanser",
+      "url": "/referanser/"
+    },
+    {
+      "text": "Tips og triks",
+      "url": "/tips/"
+    },
+    {
+      "text": "Om oss",
+      "url": "/om/"
+    },
+    {
+      "text": "Kontakt",
+      "url": "/kontakt/"
+    }
+  ]
+}

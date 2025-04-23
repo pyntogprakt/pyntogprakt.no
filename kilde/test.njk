@@ -1,0 +1,17 @@
+---
+permalink: /test.html
+eleventyExcludeFromCollections: true
+---
+<ul>
+{% for post in collections.utstyr %}
+  <li>{{ post.data.title }} {% if post.data.tags %}
+        <ul>
+          {% for tag in post.data.tags %}
+            <li>{{ tag }}</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        Ingen tagger
+      {% endif %}</li>
+{% endfor %}
+</ul>

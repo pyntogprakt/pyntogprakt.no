@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "navn": "Anders Arras",
+      "rolle": "Medeier",
+      "bilde": "/bilder/folk/anders.png"
+    },
+    {
+      "id": 2,
+      "navn": "Ella Grunnvåg Hagen",
+      "rolle": "Medeier",
+      "bilde": "/bilder/folk/ella.png"
+    },
+    {
+      "id": 3,
+      "navn": "Haakon Bredrup",
+      "rolle": "Medeier",
+      "bilde": "/bilder/folk/haakon.png"
+    },
+    {
+      "id": 4,
+      "navn": "Lars Martin Sandbakken",
+      "rolle": "Medeier",
+      "bilde": "/bilder/folk/larsmartin.png"
+    }
+  ]
+}

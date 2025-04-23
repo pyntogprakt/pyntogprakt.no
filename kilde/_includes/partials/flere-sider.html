@@ -1,0 +1,17 @@
+{# Genererer bare denne seksjonen hvis det er lenker å generere. #}
+{% if pagination.href.next or pagination.href.previous %}
+  <div>
+      <nav aria-label="Sideskiftlenker">
+        {% if pagination.href.previous %}
+          <a href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+            {{ paginationPrevText if paginationPrevText else 'Forrige side' }}
+          </a>
+        {% endif %}
+        {% if pagination.href.next %}
+          <a href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+              {{ paginationNextText if paginationNextText else 'Neste side' }}
+          </a>
+        {% endif %}
+      </nav>
+  </div>
+{% endif %}

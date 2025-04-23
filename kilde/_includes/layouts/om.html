@@ -1,0 +1,19 @@
+{% extends "layouts/base.html" %}
+
+{% set sidehodeTittel = title %}
+{% set sidehodeOppsummering = content %}
+{% set peopleItems = collections.folk %}
+
+{% block content %}
+  <article>
+    {% include "partials/sidehode.html" %}
+    {% if peopleItems %}
+      <div class="[ no-js-hidden ] [ panel dot-shadow ] [ bg-light-glare ]">
+        <div class="[ wrapper ] [ flow flow-space-700 ]">
+          <h2 class="[ headline ] [ measure-micro color-quinary ]" data-highlight="dark">Hvem er vi?</h2>
+          {% include "partials/folk.html" %}
+        </div>
+      </div>
+    {% endif %}
+  </article>
+{% endblock %}

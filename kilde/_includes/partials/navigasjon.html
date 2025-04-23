@@ -1,0 +1,14 @@
+<header role="banner">
+	<div>
+    	<a href="/" aria-label="{{ site.name }} – hjem">
+    		{% include "partials/varemerke.svg" %}
+    	</a>
+    	<nav aria-label="Hovedmeny">
+            <ul role="list">
+     			{% for item in navigasjon.items %}<li>
+        				<a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+     			</li>{% endfor %}
+            </ul>
+    	</nav>
+	</div>
+</header>

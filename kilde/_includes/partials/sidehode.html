@@ -1,0 +1,12 @@
+<div class="[ page-header ] [ bg-light-glare ]">
+	<div class="[ wrapper ] [ flow ]">
+		<h1 class="[ page-header__heading ] [ headline ]" data-highlight="primary">
+			{{ sidehodeTittel }}
+		</h1>
+		{% if sidehodeOppsummering %}
+		<div class="[ page-header__summary ] [ measure-long ]">
+			{{ sidehodeOppsummering | safe }}
+		</div>
+		{% endif %}
+	</div>
+</div>

@@ -1,0 +1,20 @@
+{% set assetHash = global.random() %}
+<!DOCTYPE html>
+<html lang="no">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		{% include "partials/meta-info.html" %}
+		<link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
+	</head>
+	<body>
+	   <a class="skip-link" href="#hovedinnhold">Hopp til hovedinnhold</a>
+	   {% include "partials/navigasjon.html" %}
+	   <main tabindex="-1" id="hovedinnhold">
+			{% block content %}{% endblock %}
+		</main>
+		<footer>
+		  {% include "partials/fottekst.html" %}
+		</footer>
+	</body>
+</html>

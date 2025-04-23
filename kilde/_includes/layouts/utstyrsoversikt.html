@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% set sidehodeTittel = title %}
+{% set sidehodeOppsummering = content %}
+{% set utstyrslisteElementer = pagination.items %}
+
+{# If this is a tag, grab those items instead as one large collection #}
+{% if tag %}
+  {% set utstyrslisteElementer = collections[tag] %}
+  {% set sidehodeTittel = 'Utstyr i kategorien “' + tag + '”' %}
+{% endif %}
+
+{% block content %}
+  <article>
+    {% include "partials/sidehode.html" %}
+    {% include "partials/utstyrsliste.html" %}
+
+    {# If we leave pagination in for tags, the next and prev links will
+      link to tags and be rather confusing, so don't render in that situation #}
+    {% if not tag %}
+      {% include "partials/flere-sider.html" %}
+    {% endif %}
+  </article>
+{% endblock %}

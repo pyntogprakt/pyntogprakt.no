@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+
+{% set sidehodeTittel = title %}
+{% set sidehodeOppsummering = content %}
+{% set personvernArtikler = collections.personvern %}
+
+{% block content %}
+  <article>
+      {% include "partials/sidehode.html" %}
+		{% if personvernArtikler %}
+		   {% for item in personvernArtikler %}<h2>{{ item.data.title | safe }}</h2>
+				<article id="{{ item.data.title | slugify }}">{{ item.templateContent | safe }}</article>
+			{% endfor %}
+		{% endif %}
+  </article>
+{% endblock %}
