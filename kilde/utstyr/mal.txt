@@ -1,7 +1,4 @@
 ---
-## Må slettes
-eleventyExcludeFromCollections: true #unngår at malen inngår i collections
-
 id:
 title: ""
 brand: ""

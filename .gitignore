@@ -11,20 +11,10 @@ npm-debug.*
 
 # Node modules and output
 node_modules
-node_modules_old
-dist
-publisert
-src/_includes/css
+kilde/_includes/css
 
 
 #Other files and directories
-alfa
-_alfa
-_instantsearch-app
 _Pynt og prakt.scarlet
-_kilde
-_publisert
-_lefs
 konfigurasjon
-config
 vendor
